@@ -1,27 +1,26 @@
 
-
 # SafeScan Ireland 🇮🇪
-**Automated Product Recall Detection Tool**
+### Automated Food Recall & Safety Alert Monitor
 
-## 🎯 Project Goal
-A data-driven application designed to bridge the gap between official government safety alerts (FSAI/CCPC) and daily consumer choices in Ireland. 
+**About the Project**
+SafeScan is a lightweight utility designed to monitor the Food Safety Authority of Ireland (FSAI) for new product recalls. Instead of manually checking for updates, this script automatically scrapes the official FSAI "News & Alerts" page and triggers a system desktop notification the moment a new alert is published.
 
-## 💡 The Concept
-This tool is built to:
-1. **Scrape** real-time data from Irish safety authorities.
-2. **Parse** raw text to extract EAN barcodes and severity levels.
-3. **Notify** users if a product is unsafe in their specific county.
+**Current Features (Working)**
+- [x] **Web Scraping**: Directly pulls data from the FSAI website using Axios and Cheerio (bypassing unreliable RSS feeds).
+- [x] **Smart Filtering**: Uses CSS selectors to identify alert titles and headlines.
+- [x] **Anti-Spam Logic**: Implements a `Set`-based history to ensure you only get notified once per unique alert.
+- [x] **Desktop Notifications**: Cross-platform alerts (Windows, macOS, Linux) via `node-notifier`.
+- [x] **Bot-Detection Bypass**: Uses custom User-Agent headers to mimic a real browser.
 
-## 🛠️ Tech Stack (Learning Path)
-- **Node.js**: Backend environment for data processing.
-- **Axios & Cheerio**: Tools used for web scraping and HTML parsing.
-- **JavaScript (ES6+)**: Core logic and data filtering.
+**Tech Stack**
+- **Node.js**: The runtime environment.
+- **Axios**: Handles HTTP requests to fetch the website content.
+- **Cheerio**: Provides a jQuery-like syntax to parse and extract data from the HTML.
+- **Node-notifier**: Triggers system-level pop-up alerts.
 
-## 📑 Roadmap
-- [x] Initial Project Concept
-- [ ] **Current Phase:** Building the Automated Scraper (Node.js)
-- [ ] Database integration (JSON/Firebase)
-- [ ] Mobile-first Frontend with Barcode Scanner
-
-## ⚖️ License
-MIT License - Developed for educational purposes.
+**Quick Start**
+1. **Clone the repository** and navigate to the project folder.
+2. **Install dependencies**:
+   ```bash
+   npm install axios cheerio node-notifier
+   
