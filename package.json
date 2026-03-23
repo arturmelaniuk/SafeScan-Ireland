@@ -1,0 +1,16 @@
+{
+  "name": "safescan-ireland",
+  "version": "1.0.0",
+  "description": "Monitor alertów bezpieczeństwa żywności FSAI",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "node-notifier": "^10.0.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
